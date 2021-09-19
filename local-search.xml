@@ -4,11 +4,30 @@
   
   
   <entry>
+    <title>ADBlock插件实现原理</title>
+    <link href="/2021/09/19/ADBlock%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
+    <url>/2021/09/19/ADBlock%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="https://adblockplus.org/zh_CN/about">Adblock</a> Plus 是一个可让您自定义您的网络体验的免费扩展程序。您可以屏蔽烦人的广告、防止跟踪等等。它适用于所有主要的桌面浏览器和移动设备。</p></blockquote><span id="more"></span><p>文章推荐阅读：<a href="https://www.jianshu.com/p/f2e1dc62cc82">ADBlock的实现原理</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>chrome插件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>内网穿透</title>
     <link href="/2021/09/18/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
     <url>/2021/09/18/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
     
-    <content type="html"><![CDATA[<blockquote><p>内网穿透：对于内网来说，其不是不能主动访问公网端口，而是不能反过来有效的被公网访问。内网穿透的主要思路就是利用这一点，让在内网的节点主动访问一个拥有公网IP地址的服务器，并由中间服务器搭桥，打通经过该服务器从其他主机到NAT之后节点的隧道。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>内网穿透：对于内网来说，其不是不能主动访问公网端口，而是不能反过来有效的被公网访问。内网穿透的主要思路就是利用这一点，让在内网的节点主动访问一个拥有公网IP地址的服务器，并由中间服务器搭桥，打通经过该服务器从其他主机到NAT之后节点的隧道。</p></blockquote><more>]]></content>
     
     
     

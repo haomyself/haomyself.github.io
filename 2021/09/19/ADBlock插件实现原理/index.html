@@ -14,11 +14,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="
+Adblock Plus 是一个可让您自定义您的网络体验的免费扩展程序。您可以屏蔽烦人的广告、防止跟踪等等。它适用于所有主要的桌面浏览器和移动设备。
+">
   <meta name="author" content="云游">
   <meta name="keywords" content="">
   
-  <title>内网穿透 - Hexo</title>
+  <title>ADBlock插件实现原理 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +165,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="内网穿透">
+            <span class="h2" id="subtitle" title="ADBlock插件实现原理">
               
             </span>
 
@@ -173,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-18 21:26" pubdate>
-        2021年9月18日 晚上
+      <time datetime="2021-09-19 10:48" pubdate>
+        2021年9月19日 上午
       </time>
     </span>
   
@@ -185,7 +187,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      109 字
+      71 字
     </span>
   
 
@@ -225,16 +227,17 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">内网穿透</h1>
+            <h1 style="display: none">ADBlock插件实现原理</h1>
             
             <div class="markdown-body">
               <blockquote>
-<p>内网穿透：对于内网来说，其不是不能主动访问公网端口，而是不能反过来有效的被公网访问。内网穿透的主要思路就是利用这一点，让在内网的节点主动访问一个拥有公网IP地址的服务器，并由中间服务器搭桥，打通经过该服务器从其他主机到NAT之后节点的隧道。</p>
+<p><a target="_blank" rel="noopener" href="https://adblockplus.org/zh_CN/about">Adblock</a> Plus 是一个可让您自定义您的网络体验的免费扩展程序。您可以屏蔽烦人的广告、防止跟踪等等。它适用于所有主要的桌面浏览器和移动设备。</p>
 </blockquote>
-<more>
+<span id="more"></span>
 
 
 
+<p>文章推荐阅读：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f2e1dc62cc82">ADBlock的实现原理</a></p>
 
             </div>
             <hr>
@@ -245,7 +248,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a>
+                      <a class="hover-with-bg" href="/tags/chrome%E6%8F%92%E4%BB%B6/">chrome插件</a>
                     
                   </div>
                 
@@ -262,15 +265,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/19/ADBlock%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ADBlock插件实现原理</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/09/18/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+                        <span class="hidden-mobile">内网穿透</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
