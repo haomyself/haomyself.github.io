@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>正则表达式</title>
+    <link href="/2021/09/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <url>/2021/09/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>正则表达式快速高效，对于某些内容的提取有非常明显的效果，而编程语言的正则大都相同，等于是学一个知识通一类知识，简直不要太爽。</p></blockquote><span id="more"></span><p>A <strong>regular expression</strong> shortened as <strong>regex</strong> or <strong>regexp</strong>; also referred to as <strong>rational expression</strong>is a sequence of characters that specifies a <em>search pattern</em>. Usually such patterns are used by string-searching algorithms for “find” or “find and replace” operations on strings, or for input validation. It is a technique developed in theoretical computer science and formal language theory.</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>小知识</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ADBlock插件实现原理</title>
     <link href="/2021/09/19/ADBlock%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
     <url>/2021/09/19/ADBlock%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</url>
