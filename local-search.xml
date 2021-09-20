@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>回调函数</title>
+    <link href="/2021/09/20/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
+    <url>/2021/09/20/%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>definition: A callback is a function that is passed as an argument to another function and is executed after its parent function has completed.</p></blockquote><span id="more"></span><ul><li><p>同步编程</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs javascript">  <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>      startBoil();<br>      coolDown();<br>      drinkSoap();<br>  &#125;).start();<br>  <br>  # 第一步 -- 炖汤<br>  # 第二步 -- 汤凉一会<br># 第三步 -- 喝汤<br>  <br></code></pre></td></tr></table></figure></li></ul><p>以上的三个操作要转换成异步调用模式，最直观的解决方案就是用<strong>回调函数</strong>。什么是回调函数呢？</p><p>即一个函数作为另一个函数的参数</p><blockquote><p>推荐阅读 </p><ul><li><a href="#js%E7%9A%84%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88">js中的函数指针</a></li></ul></blockquote><ul><li><p>异步回调</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript">startBoil(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;炖好了，撒点盐&quot;</span>)<br>    coolDown(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params"></span>) </span>&#123;<br>        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;现在可以喝了&quot;</span>)<br>        drinkSoap(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callback</span>(<span class="hljs-params"></span>) </span>&#123;<br>          <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;嗝~~&quot;</span>)<br>        &#125;)<br>  &#125;)<br>&#125;)<br></code></pre></td></tr></table></figure></li></ul><p>以上写法虽然避免了线程间上下文切换的问题，但这样写异步代码，写着写着屏幕就不够宽了。嵌套回调越来越深，变成了回调地狱。</p><p>拓展</p><ul><li><h5 id="js的函数指针"><a href="#js的函数指针" class="headerlink" title="js的函数指针"></a>js的函数指针</h5></li></ul><blockquote><p>函数名就是函数指针,函数名指向函数主体,对于function hello(){}这个函数，hello即代表函数的主体，而hello()则是函数实现的结果。</p></blockquote><h4 id=""><a href="#" class="headerlink" title=""></a></h4>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>小知识</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java输入输出</title>
     <link href="/2021/09/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
     <url>/2021/09/19/Java%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
