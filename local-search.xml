@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>单元测试</title>
+    <link href="/2021/09/25/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <url>/2021/09/25/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<p>通过此小节的学习，你将了解有关Java 单元测试有关的知识</p><span id="more"></span><h3 id="单元测试含义及介绍"><a href="#单元测试含义及介绍" class="headerlink" title="单元测试含义及介绍"></a>单元测试含义及介绍</h3><p>junit又被称作单元测试,是Java中的一个工具类库,应用于测试程序</p><p>单元测试中的单元含义:一个类中有许多的方法,一个方法又被称作单元</p><h3 id="为什么使用单元测试"><a href="#为什么使用单元测试" class="headerlink" title="为什么使用单元测试?"></a>为什么使用单元测试?</h3><p>当需要测试一段程序的结果时,单独建一个文件进行测试,当测试其他的程序段时,又要将原来的代码段去除或者是注释掉,这个过程十分的麻烦,此时单元测试应运而生</p><h3 id="如何使用单元测试"><a href="#如何使用单元测试" class="headerlink" title="如何使用单元测试"></a>如何使用单元测试</h3><ol><li>引入junit依赖</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dependency&gt;<br>            &lt;groupId&gt;junit&lt;/groupId&gt;<br>            &lt;artifactId&gt;junit&lt;/artifactId&gt;<br>            &lt;version&gt;<span class="hljs-number">4.12</span>&lt;/version&gt;<br>&lt;/dependency&gt;<br></code></pre></td></tr></table></figure><ol start="2"><li><p>创建测试的package,目录路径为src/test/java,Java为绿色</p></li><li><p>创建测试方法,方法的要求如下</p></li></ol><ul><li>public方法</li><li>没有返回值</li><li>方法名称自定义,建议是test + 测试方法名称</li><li>方法没有参数</li><li>方法上面加上@Test</li></ul><ol start="4"><li>若要同时测试多个方法,直接点击类名运行即可,这会将所有包含@Test的方法运行</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>保留指定位数的小数</title>
     <link href="/2021/09/22/%E4%BF%9D%E7%95%99%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%84%E5%B0%8F%E6%95%B0/"/>
     <url>/2021/09/22/%E4%BF%9D%E7%95%99%E6%8C%87%E5%AE%9A%E4%BD%8D%E6%95%B0%E7%9A%84%E5%B0%8F%E6%95%B0/</url>
