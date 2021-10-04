@@ -14,13 +14,29 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
+  <meta name="description" content="通过此小节的学习，你将了解有关于linux中的硬链接和软链接的相关知识">
   <meta name="author" content="云游">
   <meta name="keywords" content="">
   
-  <title>标签 - linux - Hexo</title>
+  <title>linux中的硬链接和软链接 - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -48,7 +64,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -142,22 +158,55 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://cdn.jsdelivr.net/gh/haomyself/haomyself.github.io/img/bg.jpg') no-repeat center center;
+         style="background: url('https://cdn.jsdelivr.net/gh/haomyself/picture_bed/img/98.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签 - linux">
+            <span class="h2" id="subtitle" title="linux中的硬链接和软链接">
               
             </span>
 
             
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-10-02 19:53" pubdate>
+        2021年10月2日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      500 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
           </div>
 
-          
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
           
         </div>
       </div>
@@ -166,46 +215,116 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/10/02/linux%E4%B8%AD%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E8%BD%AF%E9%93%BE%E6%8E%A5/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">linux中的硬链接和软链接</span>
-      <time style="float: right;">10-02</time>
-    </a>
-  
-    
-    <a href="/2021/09/21/linus%E6%9C%89%E5%85%B3%E7%9A%84%E5%91%BD%E4%BB%A4/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">linus有关的命令</span>
-      <time style="float: right;">09-21</time>
-    </a>
-  
-</div>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">linux中的硬链接和软链接</h1>
+            
+            <div class="markdown-body">
+              <p>通过此小节的学习，你将了解有关于linux中的硬链接和软链接的相关知识</p>
+<span id="more"></span>
+
+<p>如图所示</p>
+<p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20211002195517086.png" srcset="/img/loading.gif" lazyload alt="image-20211002195517086"></p>
+<blockquote>
+<ol>
+<li>创建一个file1 文件</li>
+<li>创建一个对于file1的一个硬链接文件</li>
+<li>创建一个对于file1的一个软链接文件</li>
+<li>显示文件</li>
+<li>查看inode值,得知file1与file2具有相同的inode值,而file3具有不同的值.</li>
+<li>将一句“hello world” 重定向到file1中</li>
+<li>分别输出file1,file2,file3的相关文件</li>
+<li>删除file1</li>
+<li>file2 可以正常显示,file3不可以</li>
+</ol>
+<p>总结: </p>
+<p>​        软链接类似于快捷方式,当本体删掉之后,当然就失效了.硬链接相当于是对于原文件的备份文件,而原文件可以有多个备份文件,只有将备份文件全部删除,才是真是的对于原文件内容的删除.</p>
+</blockquote>
+<center><h3>相关知识链接</h3></center>
+
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tap">$ ls -li<br>inode值    文件类型权限    连接计数     文件拥有者      文件群组      大小     修改日期      名称<br>12976146   drwxr-xr-x.   	2         <span class="hljs-number"> 11111111 </span>    wjshan0808     <span class="hljs-number"> 4096 </span>   Sep<span class="hljs-number"> 16 </span>12:37    Desktop<br></code></pre></td></tr></table></figure>
 
 
 
 
 
-              </div>
+<p>​        文件存储在硬盘上，硬盘的最小存储单位叫做“扇区”（Sector）。每个扇区储存512字节（相当于0.5KB）。操作系统读取硬盘的时候，不会一个个扇区的读取，这样效率太低，而是一次性连续读取多个扇区，即一次性读取一个“块”（block）。这种由多个扇区组成的“块”，是文件存取的最小单位。“块”的大小，最常见的是4KB，即连续八个sector组成一个block。文件数据都储存在“块”中，那么很显然，我们还必须找到一个地方储存文件的“元信息”，比如文件的创建者、文件的创建日期、文件的大小等等。这种储存文件元信息的区域就叫做<strong>inode</strong>，中文译名为”索引节点”。每一个文件都有对应的inode，里面包含了与该文件有关的一些信息。</p>
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/linux/">linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/10/03/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java中接口和抽象类的区别</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/10/02/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/">
+                        <span class="hidden-mobile">雪花算法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -309,9 +428,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
 
 
 

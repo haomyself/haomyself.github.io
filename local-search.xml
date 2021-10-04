@@ -4,6 +4,89 @@
   
   
   <entry>
+    <title>spring面试题</title>
+    <link href="/2021/10/03/spring%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <url>/2021/10/03/spring%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>搜集到的有关spring的面试题</p><span id="more"></span><h3 id="1-谈谈你对Spring的理解"><a href="#1-谈谈你对Spring的理解" class="headerlink" title="1.谈谈你对Spring的理解"></a>1.谈谈你对Spring的理解</h3><h4 id="什么是spring"><a href="#什么是spring" class="headerlink" title="什么是spring"></a>什么是spring</h4><ul><li>Spring是一个生态:可以构建java应用所需的一切基础设施</li><li>通常Spring指的就是Spring Framework</li></ul><h4 id="核心解释"><a href="#核心解释" class="headerlink" title="核心解释"></a>核心解释</h4><p>​    - spring是一个轻量级的开源容器框架。</p><p>​    - spring是为了解决企业级应用开发的业务逻辑层和其他各层对象和对象直接的耦合问题</p><p>​    - spring是一个IOC和AOP的容器框架。</p><p>lOC:控制反转</p><p>AOP:面向切面编程<br>容器:包含并管理应用对象的生命周期</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java中接口和抽象类的区别</title>
+    <link href="/2021/10/03/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <url>/2021/10/03/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>linux中的硬链接和软链接</title>
+    <link href="/2021/10/02/linux%E4%B8%AD%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E8%BD%AF%E9%93%BE%E6%8E%A5/"/>
+    <url>/2021/10/02/linux%E4%B8%AD%E7%9A%84%E7%A1%AC%E9%93%BE%E6%8E%A5%E5%92%8C%E8%BD%AF%E9%93%BE%E6%8E%A5/</url>
+    
+    <content type="html"><![CDATA[<p>通过此小节的学习，你将了解有关于linux中的硬链接和软链接的相关知识</p><span id="more"></span><p>如图所示</p><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20211002195517086.png" alt="image-20211002195517086"></p><blockquote><ol><li>创建一个file1 文件</li><li>创建一个对于file1的一个硬链接文件</li><li>创建一个对于file1的一个软链接文件</li><li>显示文件</li><li>查看inode值,得知file1与file2具有相同的inode值,而file3具有不同的值.</li><li>将一句“hello world” 重定向到file1中</li><li>分别输出file1,file2,file3的相关文件</li><li>删除file1</li><li>file2 可以正常显示,file3不可以</li></ol><p>总结: </p><p>​        软链接类似于快捷方式,当本体删掉之后,当然就失效了.硬链接相当于是对于原文件的备份文件,而原文件可以有多个备份文件,只有将备份文件全部删除,才是真是的对于原文件内容的删除.</p></blockquote><center><h3>相关知识链接</h3></center><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tap">$ ls -li<br>inode值    文件类型权限    连接计数     文件拥有者      文件群组      大小     修改日期      名称<br>12976146   drwxr-xr-x.   2         <span class="hljs-number"> 11111111 </span>    wjshan0808     <span class="hljs-number"> 4096 </span>   Sep<span class="hljs-number"> 16 </span>12:37    Desktop<br></code></pre></td></tr></table></figure><p>​        文件存储在硬盘上，硬盘的最小存储单位叫做“扇区”（Sector）。每个扇区储存512字节（相当于0.5KB）。操作系统读取硬盘的时候，不会一个个扇区的读取，这样效率太低，而是一次性连续读取多个扇区，即一次性读取一个“块”（block）。这种由多个扇区组成的“块”，是文件存取的最小单位。“块”的大小，最常见的是4KB，即连续八个sector组成一个block。文件数据都储存在“块”中，那么很显然，我们还必须找到一个地方储存文件的“元信息”，比如文件的创建者、文件的创建日期、文件的大小等等。这种储存文件元信息的区域就叫做<strong>inode</strong>，中文译名为”索引节点”。每一个文件都有对应的inode，里面包含了与该文件有关的一些信息。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>雪花算法</title>
+    <link href="/2021/10/02/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/"/>
+    <url>/2021/10/02/%E9%9B%AA%E8%8A%B1%E7%AE%97%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>通过此小节的学习，你将了解什么是雪花算法,雪花算法的工作原理</p><span id="more"></span><blockquote><p>借鉴</p><p><a href="https://ctexthuang.com/archives/6/">雪花算法 SnowFlake 从来源到 PHP 示例代码</a></p><p><a href="https://www.bilibili.com/video/BV1Xa4y1i7Ax?from=search&seid=863073683640036696&spm_id_from=333.337.0.0">雪花算法 | 好懂23期</a></p></blockquote><p>​        </p><p>​        Twitter-SnowFlake算法的产生是源于Twitter为了满足自己业务(每秒上万条消息的请求，每条消息都必须分配一条唯一的id，并且在分布式系统中不同机器产生的id必须不同)的需求。</p><p>Twitter开源的由64位整数组成分布式ID</p><p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20211003101332852.png" alt="image-20211003101332852"></p><p>64位数字所代表的含义</p><p>1:  符号位,表示数字的正负,因为都是正数,所以第一位是不变的</p><p>2~42: 表示当前时间的毫秒级时间戳,自增</p><p>43~52: 表示产生该数字的服务器的机器id</p><p>53~64: 序列号,即本服务器当前所产生的第多少个数字</p><blockquote><p>注意</p><ol><li>当一毫秒内生成的数字超过4096个时,该毫秒内就不会再产生数字,只能等待下一秒</li><li>该算法最重要的就是服务器的时钟不能发生回拨现象,即时间戳变成原来的时间戳,没有自增,这样就会生成重复的数字</li></ol></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>小知识</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>spring问题解决</title>
+    <link href="/2021/09/30/spring%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <url>/2021/09/30/spring%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</url>
+    
+    <content type="html"><![CDATA[<p>以下是有关于spring的问题解决</p><span id="more"></span><ul><li>Cannot resolve plugin org.apache.maven.plugins:maven-site-plugin</li></ul><p>解决方法一</p><p>​        maven的setting文件镜像修改如下</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>alimaven<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>aliyun maven<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br> <br> <span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>huaweicloud<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>mirror from maven huaweicloud<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://mirror.huaweicloud.com/repository/maven/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>ibiblio<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Mirror from Maven ibiblio<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://mirrors.ibiblio.org/pub/mirrors/maven2/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Maven Repository Switchboard<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://repo1.maven.org/maven2/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Maven Repository Switchboard<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://repo1.maven.apache.org/maven2/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>sprintio<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Human Readable Name for this Mirror.<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://repo.spring.io/libs-snapshot/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>ui<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Mirror from UK<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://uk.maven.org/maven2/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>jboss-public-repository-group<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>JBoss Public Repository Group<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://repository.jboss.org/nexus/content/groups/public<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>google<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>google maven<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://maven.google.com/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>maven.net.cn<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Mirror from Maven in china<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.net.cn/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>CN<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>OSChinaCentral<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://maven.oschina.net/content/groups/public/<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span><br></code></pre></td></tr></table></figure><p>解决方法二</p><p>​        <a href="https://ld246.com/article/1584103058009">解决 IDEA Maven 插件加载错误：Cannot resolve plugin org.apache.maven.plugins:maven-site-plugin:3.8.2</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>spring</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java中接口的实现</title>
     <link href="/2021/09/26/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
     <url>/2021/09/26/Java%E4%B8%AD%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
